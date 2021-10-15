@@ -3,6 +3,8 @@ My i3Config
 
 ![my workstation](./Pictures/2021-10-15-125753_3840x1080_scrot.png)
 
+![my workstation](./Pictures/rofi.png)
+
 ## Prerequirements
 * i3-gaps
 * i3blocks
