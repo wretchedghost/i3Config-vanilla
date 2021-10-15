@@ -1,6 +1,8 @@
 # i3Config
 My i3Config
 
+![my workstation](http://url/to/img.png)
+
 ## Prerequirements
 * i3-gaps
 * i3blocks
