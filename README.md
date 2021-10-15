@@ -5,6 +5,8 @@ My i3Config
 
 ![my workstation](./Pictures/rofi.png)
 
+![my workstation](./Pictures/i3blocks.png)
+
 ## Prerequirements
 * i3-gaps
 * i3blocks
