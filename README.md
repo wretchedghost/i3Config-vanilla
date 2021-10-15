@@ -1,7 +1,7 @@
 # i3Config
 My i3Config
 
-![my workstation](http://url/to/img.png)
+![my workstation](http://githubcom/wretchedghost/i3Config/Pictures/2021-10-15-125753_3840x1080_scrot.png)
 
 ## Prerequirements
 * i3-gaps
