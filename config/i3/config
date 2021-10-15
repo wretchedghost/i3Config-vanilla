@@ -62,7 +62,7 @@ bindsym $mod+i exec --no-startup-id urxvt -e htop
 bindsym $mod+f exec --no-startup-id /usr/bin/brave-browser-beta
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+p exec -no-startup-id /usr/bin/spotify 
-bindsym $mod+m exec --no-startup-id wine ~/Downloads/winbox64.exe -name Winbox
+bindsym $mod+m exec --no-startup-id wine ~/Downloads/winbox64.exe -name WinBox
 bindsym $mod+F3 exec --no-startup-id pcmanfm 
 bindsym $mod+n exec /bin/bash ~/bin/visionclient/app/visionclientlauncher.sh
 
@@ -115,8 +115,8 @@ for_window [class="Arandr"] floating enable
 for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down 28 px
 for_window [title="term"] floating enable move position center
     for_window [title="term"] resize set 900 20
-for_window [class="Winbox"] floating enable
-    for_window [class="Winbox"] resize set 640 480
+for_window [title="^WinBox"] floating enable
+    for_window [title="^WinBox"] resize set 720 480
 
 # Sticky floating windows. Only takes effect if the windows is floating
 for_window [instance="^URxvt"] sticky enable
@@ -125,6 +125,7 @@ for_window [class="^org.remmina.Remmina"] sticky enable
 for_window [class="^Thunar"] sticky enable
 for_window [class="^Pcmanfm"] sticky enable
 for_window [class="Arandr"] sticky enable
+for_window [title="^WinBox"] sticky enable
 
 #------------------------------------------------------------WORKSPACE ASSIGNMENT
 
@@ -144,10 +145,11 @@ assign [class="^Brave*"] $ws1
 assign [class="Pale Moon"] $ws1
 assign [class="Firefox"] $ws1
 assign [class="^Thunderbird"] $ws3
+assign [class="^Gimp"] $ws5
 assign [class="^Signal"] $ws4
 assign [class="^org.remmina.Remmina"] $ws6
 assign [class="Spotify"] $ws8
-assign [class="^Teamviewer"] $ws9
+assign [class="^TeamViewer"] $ws9
 assign [class="^com-inductive*"] $ws10
 
 #--------------------------------------------------------------------WINDOW FOCUS
@@ -169,9 +171,10 @@ bindsym $mod+Shift+l move right 40 px
 
 for_window [class="^Brave*"] focus
 for_window [class="^Signal"] focus
-for_window [class="^Teamviewer"] focus
+for_window [class="^TeamViewer"] focus
 for_window [class="^Spotify"] focus
 for_window [class="^org.remmina.Remmina"] focus
+for_window [class="^Gimp"] focus
 
 #-----------------------------------------------------------------WINDOW SPLITTING
 
