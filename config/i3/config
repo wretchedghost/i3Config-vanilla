@@ -64,7 +64,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+p exec -no-startup-id /usr/bin/spotify 
 bindsym $mod+m exec --no-startup-id wine ~/Downloads/winbox64.exe -name WinBox
 bindsym $mod+F3 exec --no-startup-id pcmanfm 
-bindsym $mod+n exec /bin/bash ~/bin/visionclient/app/visionclientlauncher.sh
+bindsym $mod+n exec /bin/bash ~/bin/visionclientlauncher/app/visionclientlauncher.sh
 
 bindsym $mod+Shift+Ctrl+Up exec /usr/bin/xbacklight -inc 10%
 bindsym $mod+Shift+Ctrl+Down exec /usr/bin/xbacklight -dec 10%
@@ -81,9 +81,9 @@ bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 bindsym $mod+x exec $HOME/.config/i3/lock_and_blur.sh
 
 # Take a screenshot with scrot
-bindsym Print exec --no-startup-id i3-scrot 
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w 
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s 
+#bindsym Print exec --no-startup-id scrot
+bindsym $mod+Print --release exec --no-startup-id scrot -d 5; exec notify-send 'Taking a screenshot. 5 second timer'
+bindsym $mod+Shift+Print --release exec --no-startup-id scrot -d 5 -s; exec notify-send 'Select a window. 5 second timer.'
 
 #---------------------------------------------------------STARTUP PROGRAMS
 
@@ -94,7 +94,7 @@ exec --no-startup-id /usr/bin/numlockx
 exec --no-startup-id /usr/bin/picom -cb
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/volumeicon 
-exec --no-startup-id /usr/bin/feh --bg-fill -z ~/Pictures/Portugal/
+exec --no-startup-id $HOME/.fehbg
 exec --no-startup-id /usr/bin/redshift
 exec --no-startup-id conky -d -c $HOME/.config/i3/conky-left
 # runs notify-send in critcal mode and stays up for 10 seconds (10000 mili)
@@ -140,6 +140,13 @@ set $ws8 "8:"
 set $ws9 "9"
 set $ws10 "10:"
 
+workspace "2:" output eDP-1
+
+workspace "7:" output DP-1
+workspace "8:" output DP-1
+workspace "9:" output DP-1
+workspace "10:" output DP-1
+
 # Open applications on specific workspaces 
 assign [class="^Brave*"] $ws1
 assign [class="Pale Moon"] $ws1
@@ -148,7 +155,7 @@ assign [class="^Thunderbird"] $ws3
 assign [class="^Gimp"] $ws5
 assign [class="^Signal"] $ws4
 assign [class="^org.remmina.Remmina"] $ws6
-assign [class="Spotify"] $ws8
+assign [class="^Spotify*"] $ws8
 assign [class="^TeamViewer"] $ws9
 assign [class="^com-inductive*"] $ws10
 
@@ -172,9 +179,10 @@ bindsym $mod+Shift+l move right 40 px
 for_window [class="^Brave*"] focus
 for_window [class="^Signal"] focus
 for_window [class="^TeamViewer"] focus
-for_window [class="^Spotify"] focus
+for_window [class="^Spotify*"] focus
 for_window [class="^org.remmina.Remmina"] focus
 for_window [class="^Gimp"] focus
+for_window [class="^com-inductive*"] focus
 
 #-----------------------------------------------------------------WINDOW SPLITTING
 
