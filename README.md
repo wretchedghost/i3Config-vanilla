@@ -13,14 +13,15 @@ My i3Config
   * NetworkManager/nmcli : nm-vpn Blocket
   * networkmanager-openvpn
   * perl-json : weather_NOAA Blocklet
-* rofi
-* dunst
+* rofi - Menu
+* dunst - Notifications
 * ttf-font-awesome
 * ttf-monoid
 * ttf-dejavu
 * ttf-hack
 * calcurse
 * gsimplecal
+* acpi - Battery
 
 ## Optional
 * conky
