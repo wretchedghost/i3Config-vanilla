@@ -66,8 +66,9 @@ bindsym $mod+m exec --no-startup-id wine ~/Downloads/winbox64.exe -name WinBox
 bindsym $mod+F3 exec --no-startup-id pcmanfm 
 bindsym $mod+n exec /bin/bash ~/bin/visionclientlauncher/app/visionclientlauncher.sh
 
-bindsym $mod+Shift+Ctrl+Up exec /usr/bin/xbacklight -inc 10%
-bindsym $mod+Shift+Ctrl+Down exec /usr/bin/xbacklight -dec 10%
+#bindsym $mod+Shift+Ctrl+Up exec /usr/bin/xbacklight -inc 10%
+#bindsym $mod+Shift+Ctrl+Down exec /usr/bin/xbacklight -dec 10%
+bindsym $mod+F9 exec /usr/bin/xrandr --output eDP-1 --brightness 1.0
 
 # Caps Indicator 
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
@@ -82,8 +83,8 @@ bindsym $mod+x exec $HOME/.config/i3/lock_and_blur.sh
 
 # Take a screenshot with scrot
 #bindsym Print exec --no-startup-id scrot
-bindsym $mod+Print --release exec --no-startup-id scrot -d 5; exec notify-send 'Taking a screenshot. 5 second timer'
-bindsym $mod+Shift+Print --release exec --no-startup-id scrot -d 5 -s; exec notify-send 'Select a window. 5 second timer.'
+bindsym $mod+F10 --release exec --no-startup-id scrot -d 5; exec notify-send 'Taking a screenshot. 5 second timer'
+bindsym $mod+Shift+F10 --release exec --no-startup-id scrot -d 5 -s; exec notify-send 'Select a window. 5 second timer.'
 
 #---------------------------------------------------------STARTUP PROGRAMS
 
@@ -94,6 +95,7 @@ exec --no-startup-id /usr/bin/numlockx
 exec --no-startup-id /usr/bin/picom -cb
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/volumeicon 
+exec --no-startup-id /usr/bin/caffeine
 exec --no-startup-id $HOME/.fehbg
 exec --no-startup-id /usr/bin/redshift
 exec --no-startup-id conky -d -c $HOME/.config/i3/conky-left
@@ -140,12 +142,12 @@ set $ws8 "8:"
 set $ws9 "9"
 set $ws10 "10:"
 
-workspace "2:" output eDP-1
+#workspace "2:" output eDP-1
 
-workspace "7:" output DP-1
-workspace "8:" output DP-1
-workspace "9:" output DP-1
-workspace "10:" output DP-1
+#workspace "7:" output DP-1
+#workspace "8:" output DP-1
+#workspace "9:" output DP-1
+#workspace "10:" output DP-1
 
 # Open applications on specific workspaces 
 assign [class="^Brave*"] $ws1
@@ -244,7 +246,7 @@ bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/i3resize.sh right
 #-------------------------------------------------------------------GROUP ACTIONS
 
 # I don't know what I want to use this for just yet but its here for reference
-bindsym $mod+F8 [class="^URxvt$"] kill
+#bindsym $mod+F8 [class="^URxvt$"] kill
 
 #---------------------------------------------------------------------MISC WINDOWS
 
@@ -323,14 +325,14 @@ bar {
 	}
 }
 
-bar {
-	position top
-	output DP-1
-        status_command i3blocks -c ~/.config/i3blocks/i3blocks
-		colors {
-			background #111111
-	}
-}
+#bar {
+#	position top
+#	output DP-1
+#        status_command i3blocks -c ~/.config/i3blocks/i3blocks
+#		colors {
+#			background #111111
+#	}
+#}
 
 #-----------------------------------------------------------------TESTING
 
