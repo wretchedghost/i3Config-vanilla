@@ -42,3 +42,6 @@ URxvt.resize-font.bigger: C-k
 
 ! Fullscreen switch
 !URxvt.keysysm.F11: perl:fullscreen:switch
+
+! Scrollback size
+URxvt.saveLines: 200000
