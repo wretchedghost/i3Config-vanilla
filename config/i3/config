@@ -16,7 +16,7 @@ floating_modifier $mod
 force_focus_wrapping no
 font pango: Monoid Mono 13
 floating_maximum_size 1920 x 1080
-floating_minimum_size 85 x 85 
+floating_minimum_size 85 x 85
 popup_during_fullscreen smart
 force_display_urgency_hint 1000 ms
 focus_on_window_activation urgent
@@ -56,19 +56,25 @@ bindsym $mod+q split toggle; exec notify-send 'tile toggle'
 
 #--------------------------------------------------------------RUN PROGRAMS
 
+bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+f exec --no-startup-id /usr/bin/brave-browser-beta
+bindsym $mod+i exec --no-startup-id urxvt -e htop 
+bindsym $mod+m exec --no-startup-id wine ~/Downloads/winbox64.exe -name WinBox
+bindsym $mod+n exec /bin/bash ~/bin/visionclient/app/visionclientlauncher.sh
+bindsym $mod+p exec -no-startup-id /usr/bin/spotify 
+bindsym $mod+x exec $HOME/.config/i3/lock_and_blur.sh
+bindsym $mod+Shift+comma exec /usr/bin/autorandr mobile 
+bindsym $mod+Shift+period exec /usr/bin/autorandr work
+bindsym $mod+F3 exec --no-startup-id pcmanfm 
+bindsym $mod+F9 exec /usr/bin/xrandr --output eDP-1 --brightness 1.0
+# Take a screenshot with scrot
+bindsym $mod+F10 --release exec --no-startup-id scrot -d 5; exec notify-send 'Taking a screenshot. 5 second timer'
+bindsym $mod+Shift+F10 --release exec --no-startup-id scrot -d 5 -s; exec notify-send 'Select a window. 5 second timer.'
 bindsym $mod+Return exec --no-startup-id urxvt 
 bindsym $mod+Shift+Return exec --no-startup-id urxvt -name term
-bindsym $mod+i exec --no-startup-id urxvt -e htop 
-bindsym $mod+f exec --no-startup-id /usr/bin/brave-browser-beta
-bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym $mod+p exec -no-startup-id /usr/bin/spotify 
-bindsym $mod+m exec --no-startup-id wine ~/Downloads/winbox64.exe -name WinBox
-bindsym $mod+F3 exec --no-startup-id pcmanfm 
-bindsym $mod+n exec /bin/bash ~/bin/visionclientlauncher/app/visionclientlauncher.sh
 
 #bindsym $mod+Shift+Ctrl+Up exec /usr/bin/xbacklight -inc 10%
 #bindsym $mod+Shift+Ctrl+Down exec /usr/bin/xbacklight -dec 10%
-bindsym $mod+F9 exec /usr/bin/xrandr --output eDP-1 --brightness 1.0
 
 # Caps Indicator 
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
@@ -78,21 +84,13 @@ bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 
-#bindsym $mod+x exec /home/wretchedghost/.config/i3/lock.sh
-bindsym $mod+x exec $HOME/.config/i3/lock_and_blur.sh
-
-# Take a screenshot with scrot
-#bindsym Print exec --no-startup-id scrot
-bindsym $mod+F10 --release exec --no-startup-id scrot -d 5; exec notify-send 'Taking a screenshot. 5 second timer'
-bindsym $mod+Shift+F10 --release exec --no-startup-id scrot -d 5 -s; exec notify-send 'Select a window. 5 second timer.'
-
 #---------------------------------------------------------STARTUP PROGRAMS
 
 exec --no-startup-id /usr/bin/nm-applet
 exec --no-startup-id clipit 
 exec --no-startup-id /usr/bin/thunderbird
 exec --no-startup-id /usr/bin/numlockx
-exec --no-startup-id /usr/bin/picom -cb
+exec --no-startup-id /usr/bin/picom -cbCf
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/volumeicon 
 exec --no-startup-id /usr/bin/caffeine
@@ -135,12 +133,12 @@ set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4:"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
 set $ws8 "8:"
-set $ws9 "9"
-set $ws10 "10:"
+set $ws9 "9:"
+set $ws10 "10:"
 
 #workspace "2:" output eDP-1
 
