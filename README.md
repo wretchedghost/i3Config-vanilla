@@ -13,7 +13,7 @@ My i3Config
   * NetworkManager/nmcli : nm-vpn Blocket
   * networkmanager-openvpn
   * perl-json : weather_NOAA Blocklet
-* rofi - Menu (Currently only works with 1.6 version and NOT 1.7 version)
+* rofi - Menu (Currently only works with 1.6 version and NOT 1.7 version) (https://blog.wretchednet.com/post/rofi-broken/)[Go here to my blog on how to downgrade to 1.6 version]
 * dunst - Notifications
 * ttf-font-awesome
 * ttf-monoid
