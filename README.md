@@ -7,8 +7,10 @@ Here are some pictures of my screen using scrot. The wallpapers are of one my fa
 
 ![my workstation](./Pictures/2021-10-15-125753_3840x1080_scrot.png)
 
+Rofi
 ![my workstation](./Pictures/rofi.png)
 
+i3Blocks
 ![my workstation](./Pictures/i3blocks.png)
 
 #### Prerequirements
