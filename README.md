@@ -1,6 +1,10 @@
 # My i3 Setup
 
+Currenlty this is my config I use on my work computer but mirrors what I use on my personal workstation minus various programs I don't need (TeamViewer, Remmina, etc).
+
+#### Pics
 Here are some pictures of my screen using scrot. The wallpapers are of one my favorite places in the world, Portugal.
+
 ![my workstation](./Pictures/2021-10-15-125753_3840x1080_scrot.png)
 
 ![my workstation](./Pictures/rofi.png)
@@ -8,6 +12,7 @@ Here are some pictures of my screen using scrot. The wallpapers are of one my fa
 ![my workstation](./Pictures/i3blocks.png)
 
 #### Prerequirements
+
 * arch (but might work with other distros)
 * i3-gaps (Like i3 but with gaps)
 * i3blocks (Top Menu Bar)
@@ -32,8 +37,10 @@ Here are some pictures of my screen using scrot. The wallpapers are of one my fa
 * thunar or pcmanfm (Both are good file managers)
 
 #### Optional
+
 * ttf-monoid (A great font for the terminal)
 
 ##### To-Be-Fixed
+
 1. gsimplecal has a weird bug where it will stay popped-up even when you click off of it. Getting rid of it is as simple as hitting $mod+Shift+q when hovered over gsimplecal.
 2. I have not updated my config for rofi to reflect the changes made from version 1.7. So to get the look of my rofi you need to lock down rofi to 1.6. My blog post above shows you how to do it on an Arch-based system.
