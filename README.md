@@ -19,8 +19,7 @@ My i3Config
 * ttf-monoid
 * ttf-dejavu
 * ttf-hack
-* calcurse
-* gsimplecal
+* gsimplecal (Simple GUI calendar)
 * acpi - Battery
 
 ## Optional
