@@ -18,7 +18,7 @@ Here are some pictures of my screen using scrot. The wallpapers are of one my fa
 * feh (A simple but effective photo viewer and wallpaper setter) (Currently 0.43MB)
 * urxvt-perls (Also my personal favorite terminal emulator once its been configured. Otherwise urxvt is ugly as crap)
 * firefox (I swapped from Brave to Firefox due to Chrome and Chrome-clone security/privacy concerns)
-* rofi (Program menu) (Currently only works with 1.6 version and NOT 1.7 version) [https://blog.wretchednet.com/post/rofi-broken/](Go here to my blog on how to downgrade to 1.6 version)
+* rofi (Program menu) (Currently only works with 1.6 version and NOT 1.7 version) [Go here to my blog on how to downgrade to 1.6 version](https://blog.wretchednet.com/post/rofi-broken/)
 * dunst (Notification pop-up program) 
 * scrot (For taking screenshots)
 * screenfetch or neofetch (I prefer screenfetch but they mostly do the same thing, show hardware and other important info in the terminal)
