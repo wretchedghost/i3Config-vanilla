@@ -79,15 +79,15 @@ bindsym $mod+Return exec --no-startup-id urxvt
 bindsym $mod+Shift+Return exec --no-startup-id urxvt -name term
 
 # volume
-bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+#bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
+#bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
 
 # Granular Volume Control
-bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
-bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
+#bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
+#bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
 
 # Mute
-bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
+#bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 
 # Backlight control
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight +5 && notify-send "Brightness - $(xbacklight -get | cut -c1-2)%
@@ -102,7 +102,7 @@ bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 
 # Power Profile menu switch (rofi)
-bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
+bindsym $mod+Shift+t exec ~/.config/i3/scripts/power-profiles
 
 #---------------------------------------------------------STARTUP PROGRAMS
 
@@ -114,7 +114,7 @@ exec --no-startup-id /usr/bin/numlockx
 exec --no-startup-id /usr/bin/picom -cbCf
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/volumeicon 
-exec --no-startup-id /usr/bin/caffeine
+exec --no-startup-id /usr/bin/caffeine-ng
 exec --no-startup-id $HOME/.fehbg
 exec --no-startup-id /usr/bin/redshift
 exec --no-startup-id /usr/bin/anydesk
@@ -324,6 +324,20 @@ for_window [class="^Links$" title="^Links - "] floating enable
 
 #-------------------------------------------------------------SOME COLORS
 
+# Define Colors
+set $darkbluetrans	#08052be6 
+set $darkblue		#08052b
+set $lightblue		#5294e2
+set $urgentred		#e53935
+set $white		#ffffff
+set $black		#000000
+set $purple		#e345ff
+set $darkgrey		#383c4a
+set $grey		#b0b5bd
+set $mediumgrey		#8b8b8b
+set $yellowbrown	#e1b700
+
+
 # class                          border  backgr. text    indic.  child_border
 client.focused				    #7b7d7d #7b7d7d #000000 #7b7d7d #7b7d7d
 client.focused_inactive	        #111111	#111111 #dddddd #111111 #111111
@@ -331,8 +345,6 @@ client.focused_inactive	        #111111	#111111 #dddddd #111111 #111111
 client.urgent				    #3B89B5	#3B89B5 #a5a5a5 #85678F
 client.placeholder              #222222 #000000 #000000 #222222 #222222
 client.background			    #1A1A1A
-
-#-------------------------------------------------------------------EXTRA BINDINGS
 
 #--------------------------------------------------------------BAR OPTIONS
 
@@ -363,4 +375,4 @@ bar {
 
 # FOR TESTING
 #bindsym $mod+F12 exec "notify-send Hello, i3"
-bindsym $mod+F12 exec "notify-send \\"Hello, i3; from $USER\\""
+#bindsym $mod+F12 exec "notify-send \\"Hello, i3; from $USER\\""

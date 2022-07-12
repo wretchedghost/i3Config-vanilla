@@ -1,16 +1,16 @@
-command=~/.config/i3blocks/$BLOCK_NAME
+command=~/.config/i3/i3blocks/$BLOCK_NAME
 separator_block_width=20
-markup=none
+markup=pango
 
 # Spotify
 [spotify]
 label=
-command=$HOME/.config/i3blocks/spotify.py
+command=$HOME/.config/i3/i3blocks/spotify.py
 color=#81b71a
 interval=5
 
 [weather_NOAA]
-command=$HOME/.config/i3blocks/weather_NOAA
+command=$HOME/.config/i3/i3blocks/weather_NOAA
 #LAT=32.42
 #LON=-104.23
 interval=600
@@ -37,7 +37,7 @@ interval=30
 
 [disk-root]
 label= /:
-command=~/.config/i3blocks/disk
+command=~/.config/i3/i3blocks/disk
 interval=30
 color=#859900
 
@@ -80,13 +80,13 @@ interval=5
 [load]
 label= 
 #label=Load:
-command=~/.config/i3blocks/load_average
+command=~/.config/i3/i3blocks/load_average
 interval=10
 separator=false
 color=#6c71c4
 
 [battery2]
-command=$HOME/.config/i3blocks/battery2
+command=$HOME/.config/i3/i3blocks/battery2
 markup=pango
 interval=30
 
@@ -102,22 +102,27 @@ separator=true
 #color=#bd806b
 
 [dunst]
-command=$HOME/.config/i3blocks/dunst
+command=$HOME/.config/i3/i3blocks/dunst
 interval=once
 format=json
 markup=pango
 #min_width=50
 #align=center
 
+# Set Power-Profile
+[ppd-status]
+command=~/.config/i3/i3blocks/ppd-status
+interval=5
+
 [keyindicator]
-command=$HOME/.config/i3blocks/keyindicator
+command=$HOME/.config/i3/i3blocks/keyindicator
 KEY=CAPS
 markup=pango
 interval=once
 signal=11
 
 [keyindicator]
-command=$HOME/.config/i3blocks/keyindicator
+command=$HOME/.config/i3/i3blocks/keyindicator
 KEY=NUM
 markup=pango
 interval=once
