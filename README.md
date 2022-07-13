@@ -20,9 +20,9 @@ i3Blocks
 * arch (but might work with other distros)
 * i3-gaps (Like i3 but with gaps)
 * i3blocks (Top Menu Bar)
-  * NetworkManager/nmcli : nm-vpn Blocket
+  * NetworkManager (Needed for nm-vpn Blocket)
   * networkmanager-openvpn
-  * perl-json : weather_NOAA Blocklet
+  * perl-json (Needed for weather_NOAA Blocklet)
 * vim (My personal favorite editor)
 * feh (A simple but effective photo viewer and wallpaper setter) (Currently 0.43MB)
 * urxvt-perls (Also my personal favorite terminal emulator once its been configured. Otherwise urxvt is ugly as crap)
